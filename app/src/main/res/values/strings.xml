@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">leagueManager</string>
+    <string name="splash_text">League\nManager</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="welcome_back">Welcome Back</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="no_account_create_one">Don\'t have an account? <b><u>Register here</u></b></string>
+    <string name="create_account">Create Account</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="email">Email</string>
+    <string name="register">Register</string>
+
+    <string name="home_details">Updates\nFeeds\nRecent Streams\nEtc</string>
+    <string name="league_details">Add a League\nLeague Page Shortcut\nLeagues Preview</string>
+    <string name="streams_details">All Previous streams based on the time stamp</string>
+    <string name="profile_details">Profile\nHistory\nPS Public Data</string>
+    <string name="search_details">Search for : \nPlayers\nLeague</string>
+
+    <string name="home">Home</string>
+    <string name="league">League</string>
+    <string name="search">Search</string>
+    <string name="streams">Streams</string>
+    <string name="profile">Profile</string>
+    <string name="browse">Browse</string>
+
+</resources>

@@ -1,0 +1,56 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+    <style name="Theme.AppCompat.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <!-- bottom navigation style - font family -->
+    <style name="BottomNavDrawerTextStyle" parent="Widget.Design.BottomNavigationView">
+<!--        <item name="android:fontFamily"></item>-->
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Toolbar" parent="AppTheme">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <!-- Menu text-->
+        <item name="android:actionMenuTextColor">@color/white</item>
+        <!-- menu select effects -->
+        <item name="colorControlHighlight">@color/white</item>
+        <!-- spacing and padding -->
+        <item name="contentInsetStart">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+    </style>
+
+    <style name="HomeToolbar" parent="AppTheme">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <!-- Menu text-->
+        <item name="android:actionMenuTextColor">@color/white</item>
+        <!-- menu select effects -->
+        <item name="colorControlHighlight">@color/white</item>
+        <!-- spacing and padding -->
+        <item name="contentInsetStart">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+    </style>
+
+</resources>
