@@ -3,12 +3,12 @@
     <item
         android:id="@+id/action_home"
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/navigation_home"
         android:title="@string/home" />
     <item
         android:id="@+id/action_league"
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/navigation_league_two"
         android:title="@string/league" />
     <item
         android:id="@+id/action_search"
@@ -18,11 +18,11 @@
     <item
         android:id="@+id/action_streams"
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/navigation_streams"
         android:title="@string/streams" />
     <item
         android:id="@+id/action_profile"
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/navigation_profile_three"
         android:title="@string/profile" />
 </menu>

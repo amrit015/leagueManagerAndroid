@@ -8,5 +8,5 @@
         android:centerColor="@color/orange_red"
         android:endColor="@color/orange_red"
         android:startColor="@color/orange_red" />
-    <corners android:radius="30dp" />
+    <corners android:radius="20dp" />
 </shape>

@@ -15,12 +15,25 @@
     <string name="lastName">Last Name</string>
     <string name="email">Email</string>
     <string name="register">Register</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="playstation_data">Playstation Data</string>
+    <string name="connect_to_playstation">Connect to Playstation</string>
+    <string name="connect_to_xbox">Connect to Xbox</string>
+    <string name="history">History</string>
+    <string name="see_all">See All</string>
+    <string name="no_description_added">No Description Added</string>
+    <string name="no_history_available">No History Available</string>
+    <string name="nothing_available">Nothing Available</string>
 
     <string name="home_details">Updates\nFeeds\nRecent Streams\nEtc</string>
     <string name="league_details">Add a League\nLeague Page Shortcut\nLeagues Preview</string>
     <string name="streams_details">All Previous streams based on the time stamp</string>
     <string name="profile_details">Profile\nHistory\nPS Public Data</string>
     <string name="search_details">Search for : \nPlayers\nLeague</string>
+
+    <string name="updates">Updates</string>
+    <string name="feeds">Feeds</string>
+    <string name="recent_streams">Recent Streams</string>
 
     <string name="home">Home</string>
     <string name="league">League</string>

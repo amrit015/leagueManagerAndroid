@@ -19,6 +19,7 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:fontFamily="@font/oswald_regular"
             android:imeOptions="actionSearch"
             android:lines="1"
             android:inputType="textNoSuggestions"

@@ -6,9 +6,12 @@
     <dimen name="text_button_size">16sp</dimen>
     <dimen name="text_outlined_size">12sp</dimen>
     <dimen name="text_medium_size">16sp</dimen>
+    <dimen name="text_regular_size">14sp</dimen>
     <dimen name="text_small_size">12sp</dimen>
+    <dimen name="text_button_large_medium_size">18sp</dimen>
     <dimen name="margin_between_layout">30dp</dimen>
     <dimen name="margin_between_layout_huge">40dp</dimen>
+    <dimen name="margin_between_layout_medium">20dp</dimen>
     <dimen name="margin_between_layout_small">10dp</dimen>
     <dimen name="padding_between_layout">20dp</dimen>
     <dimen name="padding_between_layout_medium">15dp</dimen>
@@ -19,6 +22,9 @@
     <dimen name="toolbar_text_size">20sp</dimen>
     <dimen name="toolbar_back_button_padding">13dp</dimen>
     <dimen name="left_side_toolbar_margin">8dp</dimen>
+
+    <dimen name="plus_circle_width_height">20dp</dimen>
+    <dimen name="imageview_width_height">70dp</dimen>
 
     <dimen name="custom_image_inside_fb_size">55dp</dimen>  <!-- this should be same as the one in the fb image spacing override at the end of this xml file -->
     <dimen name="floating_button_margin">8dp</dimen>

@@ -1,22 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/colorPrimary"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@color/colorPrimary">
 
-    <include android:id="@+id/layout_appbar"
-        layout="@layout/layout_toolbar_home"/>
+    <include
+        android:id="@+id/layout_appbar"
+        layout="@layout/layout_toolbar_home" />
 
-    <TextView
-        android:gravity="center"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:text="@string/home_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/layout_updates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_between_layout_inner"
+        android:layout_marginTop="@dimen/padding_between_layout_small"
+        android:layout_marginEnd="@dimen/padding_between_layout_inner"
+        android:layout_marginBottom="@dimen/padding_between_layout_small"
+        android:background="@drawable/cardview_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/padding_between_layout_small"
+        card_view:layout_constraintTop_toBottomOf="@id/layout_appbar">
+
+        <RelativeLayout
+            android:id="@+id/layout_title_updates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/tv_see_all_updates"
+                android:fontFamily="@font/oswald_bold"
+                android:gravity="start"
+                android:padding="@dimen/padding_between_layout_small"
+                android:text="@string/updates"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_button_large_medium_size" />
+
+            <TextView
+                android:id="@+id/tv_see_all_updates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/padding_between_layout_inner"
+                android:fontFamily="@font/oswald_regular"
+                android:padding="@dimen/padding_between_layout_small"
+                android:text="@string/see_all"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_medium_size" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_margin_one"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_between_layout_huge"
+            android:layout_below="@id/layout_title_updates" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_margin_one"
+            android:fontFamily="@font/oswald_regular"
+            android:gravity="start"
+            android:padding="@dimen/padding_between_layout_inner"
+            android:text="@string/nothing_available"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_small_size"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_feeds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_between_layout_inner"
+        android:layout_marginTop="@dimen/padding_between_layout_small"
+        android:layout_marginEnd="@dimen/padding_between_layout_inner"
+        android:layout_marginBottom="@dimen/padding_between_layout_small"
+        android:background="@drawable/cardview_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/padding_between_layout_small"
+        card_view:layout_constraintTop_toBottomOf="@id/layout_updates">
+
+        <RelativeLayout
+            android:id="@+id/layout_title_feeds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/tv_see_all_feeds"
+                android:fontFamily="@font/oswald_bold"
+                android:gravity="start"
+                android:padding="@dimen/padding_between_layout_small"
+                android:text="@string/feeds"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_button_large_medium_size" />
+
+            <TextView
+                android:id="@+id/tv_see_all_feeds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/padding_between_layout_inner"
+                android:fontFamily="@font/oswald_regular"
+                android:padding="@dimen/padding_between_layout_small"
+                android:text="@string/see_all"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_medium_size" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_margin_two"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_between_layout_huge"
+            android:layout_below="@id/layout_title_feeds" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_margin_two"
+            android:fontFamily="@font/oswald_regular"
+            android:gravity="start"
+            android:padding="@dimen/padding_between_layout_inner"
+            android:text="@string/nothing_available"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_small_size"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_recent_streams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_between_layout_inner"
+        android:layout_marginTop="@dimen/padding_between_layout_small"
+        android:layout_marginEnd="@dimen/padding_between_layout_inner"
+        android:layout_marginBottom="@dimen/padding_between_layout_small"
+        android:background="@drawable/cardview_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/padding_between_layout_small"
+        card_view:layout_constraintTop_toBottomOf="@id/layout_feeds">
+
+        <RelativeLayout
+            android:id="@+id/layout_title_streams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/tv_see_all_streams"
+                android:fontFamily="@font/oswald_bold"
+                android:gravity="start"
+                android:padding="@dimen/padding_between_layout_small"
+                android:text="@string/recent_streams"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_button_large_medium_size" />
+
+            <TextView
+                android:id="@+id/tv_see_all_streams"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/padding_between_layout_inner"
+                android:fontFamily="@font/oswald_regular"
+                android:padding="@dimen/padding_between_layout_small"
+                android:text="@string/see_all"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_medium_size" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_margin_three"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_between_layout_huge"
+            android:layout_below="@id/layout_title_streams" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_margin_three"
+            android:fontFamily="@font/oswald_regular"
+            android:gravity="start"
+            android:padding="@dimen/padding_between_layout_inner"
+            android:text="@string/nothing_available"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_small_size"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
