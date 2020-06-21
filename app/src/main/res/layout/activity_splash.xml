@@ -5,7 +5,7 @@
     android:background="@color/black">
 
     <TextView
-        android:fontFamily="@font/oswald_regular"
+        android:fontFamily="@font/kalam_regular"
         android:textSize="@dimen/text_size_splash"
         android:textColor="@color/dark_red"
         android:textStyle="bold"

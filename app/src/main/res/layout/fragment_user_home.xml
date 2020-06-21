@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
@@ -19,10 +18,8 @@
         android:layout_marginEnd="@dimen/padding_between_layout_inner"
         android:layout_marginBottom="@dimen/padding_between_layout_small"
         android:background="@drawable/cardview_background"
-        android:clickable="true"
-        android:focusable="true"
         android:padding="@dimen/padding_between_layout_small"
-        card_view:layout_constraintTop_toBottomOf="@id/layout_appbar">
+        app:layout_constraintTop_toBottomOf="@id/layout_appbar">
 
         <RelativeLayout
             android:id="@+id/layout_title_updates"
@@ -35,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_toStartOf="@id/tv_see_all_updates"
-                android:fontFamily="@font/oswald_bold"
+                android:fontFamily="@font/kalam_regular"
                 android:gravity="start"
                 android:padding="@dimen/padding_between_layout_small"
                 android:text="@string/updates"
@@ -48,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="@dimen/padding_between_layout_inner"
-                android:fontFamily="@font/oswald_regular"
+                android:fontFamily="@font/kalam_regular"
                 android:padding="@dimen/padding_between_layout_small"
                 android:text="@string/see_all"
                 android:textColor="@color/blue"
@@ -65,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/view_margin_one"
-            android:fontFamily="@font/oswald_regular"
+            android:fontFamily="@font/kalam_regular"
             android:gravity="start"
             android:padding="@dimen/padding_between_layout_inner"
             android:text="@string/nothing_available"
@@ -84,10 +81,8 @@
         android:layout_marginEnd="@dimen/padding_between_layout_inner"
         android:layout_marginBottom="@dimen/padding_between_layout_small"
         android:background="@drawable/cardview_background"
-        android:clickable="true"
-        android:focusable="true"
         android:padding="@dimen/padding_between_layout_small"
-        card_view:layout_constraintTop_toBottomOf="@id/layout_updates">
+        app:layout_constraintTop_toBottomOf="@id/layout_updates">
 
         <RelativeLayout
             android:id="@+id/layout_title_feeds"
@@ -100,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_toStartOf="@id/tv_see_all_feeds"
-                android:fontFamily="@font/oswald_bold"
+                android:fontFamily="@font/kalam_regular"
                 android:gravity="start"
                 android:padding="@dimen/padding_between_layout_small"
                 android:text="@string/feeds"
@@ -113,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="@dimen/padding_between_layout_inner"
-                android:fontFamily="@font/oswald_regular"
+                android:fontFamily="@font/kalam_regular"
                 android:padding="@dimen/padding_between_layout_small"
                 android:text="@string/see_all"
                 android:textColor="@color/blue"
@@ -131,7 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/view_margin_two"
-            android:fontFamily="@font/oswald_regular"
+            android:fontFamily="@font/kalam_regular"
             android:gravity="start"
             android:padding="@dimen/padding_between_layout_inner"
             android:text="@string/nothing_available"
@@ -151,10 +146,8 @@
         android:layout_marginEnd="@dimen/padding_between_layout_inner"
         android:layout_marginBottom="@dimen/padding_between_layout_small"
         android:background="@drawable/cardview_background"
-        android:clickable="true"
-        android:focusable="true"
         android:padding="@dimen/padding_between_layout_small"
-        card_view:layout_constraintTop_toBottomOf="@id/layout_feeds">
+        app:layout_constraintTop_toBottomOf="@id/layout_feeds">
 
         <RelativeLayout
             android:id="@+id/layout_title_streams"
@@ -167,7 +160,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_toStartOf="@id/tv_see_all_streams"
-                android:fontFamily="@font/oswald_bold"
+                android:fontFamily="@font/kalam_regular"
                 android:gravity="start"
                 android:padding="@dimen/padding_between_layout_small"
                 android:text="@string/recent_streams"
@@ -180,7 +173,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="@dimen/padding_between_layout_inner"
-                android:fontFamily="@font/oswald_regular"
+                android:fontFamily="@font/kalam_regular"
                 android:padding="@dimen/padding_between_layout_small"
                 android:text="@string/see_all"
                 android:textColor="@color/blue"
@@ -198,7 +191,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/view_margin_three"
-            android:fontFamily="@font/oswald_regular"
+            android:fontFamily="@font/kalam_regular"
             android:gravity="start"
             android:padding="@dimen/padding_between_layout_inner"
             android:text="@string/nothing_available"

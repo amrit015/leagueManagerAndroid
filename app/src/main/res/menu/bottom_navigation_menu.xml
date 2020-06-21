@@ -8,7 +8,7 @@
     <item
         android:id="@+id/action_league"
         android:enabled="true"
-        android:icon="@drawable/navigation_league_two"
+        android:icon="@drawable/navigation_league"
         android:title="@string/league" />
     <item
         android:id="@+id/action_search"
@@ -23,6 +23,6 @@
     <item
         android:id="@+id/action_profile"
         android:enabled="true"
-        android:icon="@drawable/navigation_profile_three"
+        android:icon="@drawable/navigation_profile"
         android:title="@string/profile" />
 </menu>

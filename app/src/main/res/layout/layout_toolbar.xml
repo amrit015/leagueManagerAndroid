@@ -29,7 +29,7 @@
                 android:foregroundGravity="left" />
 
             <TextView
-                android:fontFamily="@font/oswald_bold"
+                android:fontFamily="@font/kalam_regular"
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

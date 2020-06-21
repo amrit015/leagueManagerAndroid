@@ -20,7 +20,7 @@
 
     <!-- bottom navigation style - font family -->
     <style name="BottomNavDrawerTextStyle" parent="Widget.Design.BottomNavigationView">
-        <item name="android:fontFamily">@font/oswald_regular</item>
+        <item name="android:fontFamily">@font/kalam_regular</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

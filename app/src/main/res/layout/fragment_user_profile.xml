@@ -6,9 +6,9 @@
     android:background="@color/colorPrimary">
 
     <include
-        android:visibility="visible"
         android:id="@+id/layout_appbar"
-        layout="@layout/layout_toolbar_home" />
+        layout="@layout/layout_toolbar_home"
+        android:visibility="visible" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,20 +32,20 @@
                     android:layout_height="@dimen/imageview_width_height">
 
                     <ProgressBar
-                        android:layout_centerInParent="true"
                         android:id="@+id/img_progress_bar"
                         style="?android:attr/progressBarStyleSmall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
                         android:layout_gravity="center"
                         android:visibility="gone" />
 
                     <ImageView
                         android:id="@+id/img_profile"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/profile_rounded"
+                        android:layout_width="@dimen/imageview_width_height"
+                        android:layout_height="@dimen/imageview_width_height"
+                        android:src="@drawable/navigation_profile"
                         android:tint="@color/white" />
 
                     <View
@@ -68,23 +68,23 @@
                     android:layout_toEndOf="@+id/layout_profile_image">
 
                     <TextView
-                        android:fontFamily="@font/oswald_medium"
                         android:id="@+id/tv_profile_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/padding_between_layout_small"
                         android:layout_marginBottom="@dimen/padding_between_layout_small"
+                        android:fontFamily="@font/kalam_regular"
                         android:text="Batman"
                         android:textColor="@color/white" />
 
                     <TextView
-                        android:fontFamily="@font/oswald_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/tv_profile_name"
                         android:layout_centerHorizontal="true"
                         android:background="@drawable/background_outlined_textview"
+                        android:fontFamily="@font/kalam_regular"
                         android:paddingStart="@dimen/padding_between_layout_small"
                         android:paddingTop="@dimen/padding_between_layout_inner"
                         android:paddingEnd="@dimen/padding_between_layout_small"
@@ -95,163 +95,152 @@
                 </RelativeLayout>
             </RelativeLayout>
 
-            <View
-                android:id="@+id/view_margin"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="@dimen/padding_between_layout"
-                android:layout_marginEnd="@dimen/padding_between_layout"
-                android:background="@color/grey"
-                app:layout_constraintTop_toBottomOf="@id/layout_profile_header" />
-
             <LinearLayout
                 android:id="@+id/layout_profile_details"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/padding_between_layout"
-                android:layout_marginTop="@dimen/padding_between_layout_small"
-                android:layout_marginEnd="@dimen/padding_between_layout"
+                android:layout_marginStart="@dimen/padding_between_layout_inner"
+                android:layout_marginEnd="@dimen/padding_between_layout_inner"
+                android:background="@drawable/cardview_background"
                 android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@id/view_margin">
+                android:padding="@dimen/padding_between_layout_small"
+                app:layout_constraintTop_toBottomOf="@id/layout_profile_header">
 
                 <TextView
-                    android:fontFamily="@font/oswald_bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/padding_between_layout_inner"
+                    android:fontFamily="@font/kalam_regular"
                     android:gravity="start"
+                    android:padding="@dimen/padding_between_layout_small"
                     android:text="@string/profile"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_medium_size" />
+                    android:textSize="@dimen/text_button_large_medium_size" />
 
-                <RelativeLayout
-                    android:layout_marginEnd="@dimen/padding_between_layout_small"
-                    android:layout_marginStart="@dimen/padding_between_layout_small"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_between_layout_small">
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:fontFamily="@font/oswald_regular"
-                        android:layout_toStartOf="@id/tv_first_name"
-                        android:layout_alignParentStart="true"
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/padding_between_layout_inner"
-                        android:gravity="start"
-                        android:text="@string/firstName"
-                        android:textColor="@color/white_grey"
-                        android:textSize="@dimen/text_regular_size" />
+                        android:layout_marginStart="@dimen/padding_between_layout_small"
+                        android:layout_marginEnd="@dimen/padding_between_layout_small">
 
-                    <TextView
-                        android:fontFamily="@font/oswald_regular"
-                        android:id="@+id/tv_first_name"
-                        android:layout_alignParentEnd="true"
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/padding_between_layout_inner"
+                            android:layout_toStartOf="@id/tv_first_name"
+                            android:fontFamily="@font/kalam_regular"
+                            android:gravity="start"
+                            android:text="@string/firstName"
+                            android:textColor="@color/white_grey"
+                            android:textSize="@dimen/text_regular_size" />
+
+                        <TextView
+                            android:id="@+id/tv_first_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="@dimen/padding_between_layout_inner"
+                            android:fontFamily="@font/kalam_regular"
+                            android:gravity="end"
+                            android:text="I'm"
+                            android:textColor="@color/white_grey"
+                            android:textSize="@dimen/text_regular_size" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/padding_between_layout_inner"
-                        android:gravity="end"
-                        android:text="I'm"
-                        android:textColor="@color/white_grey"
-                        android:textSize="@dimen/text_regular_size" />
-                </RelativeLayout>
+                        android:layout_marginStart="@dimen/padding_between_layout_small"
+                        android:layout_marginTop="@dimen/margin_between_layout_small"
+                        android:layout_marginEnd="@dimen/padding_between_layout_small">
 
-                <RelativeLayout
-                    android:layout_marginEnd="@dimen/padding_between_layout_small"
-                    android:layout_marginStart="@dimen/padding_between_layout_small"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_between_layout_small">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/padding_between_layout_inner"
+                            android:layout_toStartOf="@id/tv_last_name"
+                            android:fontFamily="@font/kalam_regular"
+                            android:gravity="start"
+                            android:text="@string/lastName"
+                            android:textColor="@color/white_grey"
+                            android:textSize="@dimen/text_regular_size" />
 
-                    <TextView
-                        android:fontFamily="@font/oswald_regular"
-                        android:layout_toStartOf="@id/tv_last_name"
-                        android:layout_alignParentStart="true"
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:id="@+id/tv_last_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="@dimen/padding_between_layout_inner"
+                            android:fontFamily="@font/kalam_regular"
+                            android:gravity="end"
+                            android:text="Testing"
+                            android:textColor="@color/white_grey"
+                            android:textSize="@dimen/text_regular_size" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/padding_between_layout_inner"
-                        android:gravity="start"
-                        android:text="@string/lastName"
-                        android:textColor="@color/white_grey"
-                        android:textSize="@dimen/text_regular_size" />
+                        android:layout_marginStart="@dimen/padding_between_layout_small"
+                        android:layout_marginTop="@dimen/margin_between_layout_small"
+                        android:layout_marginEnd="@dimen/padding_between_layout_small">
 
-                    <TextView
-                        android:fontFamily="@font/oswald_regular"
-                        android:id="@+id/tv_last_name"
-                        android:layout_alignParentEnd="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/padding_between_layout_inner"
-                        android:gravity="end"
-                        android:text="Testing"
-                        android:textColor="@color/white_grey"
-                        android:textSize="@dimen/text_regular_size" />
-                </RelativeLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/padding_between_layout_inner"
+                            android:layout_toStartOf="@id/tv_email"
+                            android:fontFamily="@font/kalam_regular"
+                            android:gravity="start"
+                            android:text="@string/email"
+                            android:textColor="@color/white_grey"
+                            android:textSize="@dimen/text_regular_size" />
 
-                <RelativeLayout
-                    android:layout_marginEnd="@dimen/padding_between_layout_small"
-                    android:layout_marginStart="@dimen/padding_between_layout_small"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_between_layout_small">
-
-                    <TextView
-                        android:fontFamily="@font/oswald_regular"
-                        android:layout_toStartOf="@id/tv_email"
-                        android:layout_alignParentStart="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/padding_between_layout_inner"
-                        android:gravity="start"
-                        android:text="@string/email"
-                        android:textColor="@color/white_grey"
-                        android:textSize="@dimen/text_regular_size" />
-
-                    <TextView
-                        android:fontFamily="@font/oswald_regular"
-                        android:id="@+id/tv_email"
-                        android:layout_alignParentEnd="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/padding_between_layout_inner"
-                        android:gravity="end"
-                        android:text="this@application.com"
-                        android:textColor="@color/white_grey"
-                        android:textSize="@dimen/text_regular_size" />
-                </RelativeLayout>
+                        <TextView
+                            android:id="@+id/tv_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="@dimen/padding_between_layout_inner"
+                            android:fontFamily="@font/kalam_regular"
+                            android:gravity="end"
+                            android:text="this@application.com"
+                            android:textColor="@color/white_grey"
+                            android:textSize="@dimen/text_regular_size" />
+                    </RelativeLayout>
+                </LinearLayout>
 
             </LinearLayout>
 
-            <View
-                android:id="@+id/view_margin_two"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="@dimen/padding_between_layout"
-                android:layout_marginTop="@dimen/padding_between_layout_small"
-                android:layout_marginEnd="@dimen/padding_between_layout"
-                android:background="@color/grey"
-                app:layout_constraintTop_toBottomOf="@id/layout_profile_details" />
-
             <RelativeLayout
+                android:layout_marginEnd="@dimen/padding_between_layout_small"
+                android:layout_marginStart="@dimen/padding_between_layout_small"
                 android:id="@+id/layout_connect_console"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/padding_between_layout"
-                android:layout_marginEnd="@dimen/padding_between_layout"
-                android:layout_marginBottom="@dimen/margin_between_layout"
-                app:layout_constraintTop_toBottomOf="@id/view_margin_two">
+                android:paddingTop="@dimen/padding_between_layout_small"
+                android:paddingBottom="@dimen/padding_between_layout_small"
+                app:layout_constraintTop_toBottomOf="@id/layout_profile_details">
 
                 <LinearLayout
                     android:id="@+id/layout_connect_playstation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_between_layout_medium">
+                    android:layout_marginTop="@dimen/padding_between_layout_small"
+                    android:layout_marginBottom="@dimen/padding_between_layout_small">
 
                     <TextView
-                        android:fontFamily="@font/oswald_regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/padding_between_layout_inner"
+                        android:fontFamily="@font/kalam_regular"
                         android:gravity="start"
                         android:text="@string/connect_to_playstation"
                         android:textColor="@color/blue"
@@ -271,14 +260,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/layout_connect_playstation"
-                    android:layout_marginTop="@dimen/margin_between_layout_medium">
+                    android:layout_marginTop="@dimen/padding_between_layout_small"
+                    android:layout_marginBottom="@dimen/padding_between_layout_small">
 
                     <TextView
-                        android:fontFamily="@font/oswald_regular"
                         android:id="@+id/tv_connect_xbox"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/padding_between_layout_inner"
+                        android:fontFamily="@font/kalam_regular"
                         android:gravity="start"
                         android:text="@string/connect_to_xbox"
                         android:textColor="@color/blue"
@@ -293,57 +283,60 @@
                 </LinearLayout>
             </RelativeLayout>
 
-            <View
-                android:id="@+id/view_margin_three"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="@dimen/padding_between_layout"
-                android:layout_marginTop="@dimen/margin_between_layout_medium"
-                android:layout_marginEnd="@dimen/padding_between_layout"
-                android:background="@color/grey"
-                app:layout_constraintTop_toBottomOf="@id/layout_connect_console" />
-
             <RelativeLayout
                 android:id="@+id/layout_profile_history"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/padding_between_layout"
-                android:layout_marginTop="@dimen/padding_between_layout_small"
-                android:layout_marginEnd="@dimen/padding_between_layout"
-                app:layout_constraintTop_toBottomOf="@id/view_margin_three">
+                android:layout_marginStart="@dimen/padding_between_layout_inner"
+                android:layout_marginEnd="@dimen/padding_between_layout_inner"
+                android:background="@drawable/cardview_background"
+                android:padding="@dimen/padding_between_layout_small"
+                app:layout_constraintTop_toBottomOf="@id/layout_connect_console">
 
-                <TextView
-                    android:fontFamily="@font/oswald_bold"
-                    android:id="@+id/tv_history"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/layout_title_history"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/padding_between_layout_inner"
-                    android:gravity="start"
-                    android:text="@string/history"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/text_medium_size" />
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:fontFamily="@font/oswald_regular"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="@dimen/padding_between_layout_inner"
-                    android:text="@string/see_all"
-                    android:textColor="@color/blue"
-                    android:textSize="@dimen/text_medium_size" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/tv_see_history"
+                        android:fontFamily="@font/kalam_regular"
+                        android:gravity="start"
+                        android:padding="@dimen/padding_between_layout_small"
+                        android:text="@string/history"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_button_large_medium_size" />
+
+                    <TextView
+                        android:id="@+id/tv_see_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/padding_between_layout_inner"
+                        android:fontFamily="@font/kalam_regular"
+                        android:padding="@dimen/padding_between_layout_small"
+                        android:text="@string/see_all"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/text_medium_size" />
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_history"
+                    android:layout_below="@+id/layout_title_history"
                     android:layout_marginTop="@dimen/margin_between_layout_small">
 
                     <TextView
-                        android:fontFamily="@font/oswald_regular"
+                        android:padding="@dimen/padding_between_layout_inner"
+                        android:layout_marginTop="@dimen/padding_between_layout_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/padding_between_layout_inner"
+                        android:fontFamily="@font/kalam_regular"
                         android:gravity="start"
                         android:text="@string/no_history_available"
                         android:textColor="@color/grey"
@@ -351,16 +344,6 @@
                         android:textStyle="italic" />
                 </LinearLayout>
             </RelativeLayout>
-
-            <View
-                android:id="@+id/view_margin_four"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="@dimen/padding_between_layout"
-                android:layout_marginTop="@dimen/padding_between_layout_small"
-                android:layout_marginEnd="@dimen/padding_between_layout"
-                android:background="@color/grey"
-                app:layout_constraintTop_toBottomOf="@id/layout_profile_history" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

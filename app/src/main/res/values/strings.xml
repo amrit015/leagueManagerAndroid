@@ -25,11 +25,16 @@
     <string name="no_history_available">No History Available</string>
     <string name="nothing_available">Nothing Available</string>
 
+    <string name="create_league">Create a League</string>
+    <string name="join_league">Join a League</string>
+    <string name="joined_league">Joined League</string>
+    <string name="league_updates">League Updates</string>
+
     <string name="home_details">Updates\nFeeds\nRecent Streams\nEtc</string>
     <string name="league_details">Add a League\nLeague Page Shortcut\nLeagues Preview</string>
     <string name="streams_details">All Previous streams based on the time stamp</string>
     <string name="profile_details">Profile\nHistory\nPS Public Data</string>
-    <string name="search_details">Search for : \nPlayers\nLeague</string>
+    <string name="search_details">Search for Players &amp; League</string>
 
     <string name="updates">Updates</string>
     <string name="feeds">Feeds</string>

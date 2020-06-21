@@ -2,7 +2,7 @@ package com.android.leaguemanager.di;
 
 import android.app.Application;
 
-public class leagueApp  extends Application {
+public class LeagueApp extends Application {
 
     public ApplicationComponent applicationComponent;
 

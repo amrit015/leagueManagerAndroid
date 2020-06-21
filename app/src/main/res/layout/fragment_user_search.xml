@@ -9,6 +9,7 @@
         layout="@layout/layout_toolbar_home"/>
 
     <RelativeLayout
+        android:id="@+id/layout_search"
         android:layout_marginEnd="@dimen/padding_between_layout_small"
         android:layout_marginStart="@dimen/padding_between_layout_small"
         android:background="@drawable/background_searchview"
@@ -19,7 +20,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:fontFamily="@font/oswald_regular"
+            android:fontFamily="@font/kalam_regular"
             android:imeOptions="actionSearch"
             android:lines="1"
             android:inputType="textNoSuggestions"
@@ -41,14 +42,13 @@
             android:layout_height="wrap_content"/>
     </RelativeLayout>
 
-
     <TextView
-        android:gravity="center"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="@dimen/padding_between_layout_medium"
+        android:fontFamily="@font/kalam_regular"
+        android:gravity="start"
+        android:textColor="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/layout_search"
         android:text="@string/search_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
