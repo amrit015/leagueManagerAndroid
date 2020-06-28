@@ -1,11 +1,9 @@
-package com.android.leaguemanager.mainPage.mainPageModel.loginResponse;
+package com.android.leaguemanager.mainPage.mainPageModel.registerResponse;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import kotlin.ExperimentalStdlibApi;
-
-public class LoginResponse {
+public class RegisterResponse {
 
     @SerializedName("timestamp")
     @Expose
@@ -27,11 +25,7 @@ public class LoginResponse {
     @Expose
     private String path;
 
-    @SerializedName("data")
-    @Expose
-    private LoginResponseData loginResponseData;
-
-    public String getTimeStamp() { 
+    public String getTimeStamp() {
         return timeStamp;
     }
 
@@ -69,13 +63,5 @@ public class LoginResponse {
 
     public void setPath(String path) {
         this.path = path;
-    }
-
-    public LoginResponseData getLoginResponseData() {
-        return loginResponseData;
-    }
-
-    public void setLoginResponseData(LoginResponseData loginResponseData) {
-        this.loginResponseData = loginResponseData;
     }
 }

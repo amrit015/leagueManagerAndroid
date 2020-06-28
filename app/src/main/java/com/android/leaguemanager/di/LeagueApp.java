@@ -13,6 +13,8 @@ public class LeagueApp extends Application {
         applicationComponent = DaggerApplicationComponent
                 .builder()
                 .applicationModule(new ApplicationModule(this))
+                .mainPageModule(new MainPageModule())
+                .sharedPreferenceModule(new SharedPreferenceModule())
                 .build();
     }
 

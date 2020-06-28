@@ -7,12 +7,17 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.leaguemanager.R;
+import com.android.leaguemanager.mainPage.mainPageModel.MainPageRepository;
+import com.android.leaguemanager.mainPage.mainPagePresenter.MainPagePresenterListener;
+import com.android.leaguemanager.mainPage.mainPageView.MainPageViewListener;
+
+import javax.inject.Inject;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class UserHomeFragment extends Fragment {
+public class UserHomeFragment extends Fragment{
 
     @Nullable
     @Override
@@ -21,5 +26,10 @@ public class UserHomeFragment extends Fragment {
         TextView tvToolbarTitle = rootView.findViewById(R.id.toolbar_title);
         tvToolbarTitle.setText(getResources().getString(R.string.home));
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 }

@@ -75,7 +75,6 @@
                         android:layout_marginTop="@dimen/padding_between_layout_small"
                         android:layout_marginBottom="@dimen/padding_between_layout_small"
                         android:fontFamily="@font/kalam_regular"
-                        android:text="Batman"
                         android:textColor="@color/white" />
 
                     <TextView

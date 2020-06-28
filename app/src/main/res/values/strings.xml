@@ -24,6 +24,12 @@
     <string name="no_description_added">No Description Added</string>
     <string name="no_history_available">No History Available</string>
     <string name="nothing_available">Nothing Available</string>
+    <string name="must_be_eight_characters">Must be 8+ characters</string>
+
+    <string name="password_not_match">Passwords don\'t match!</string>
+    <string name="password_requirement">Password must be 8+ characters!</string>
+    <string name="email_requirement">Please input valid email!</string>
+    <string name="empty_field">Please enter all the fields!</string>
 
     <string name="create_league">Create a League</string>
     <string name="join_league">Join a League</string>

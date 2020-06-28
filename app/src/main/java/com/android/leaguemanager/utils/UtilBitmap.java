@@ -15,7 +15,6 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.Base64;
-import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
@@ -156,7 +155,7 @@ public class UtilBitmap {
             shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             context.startActivity(Intent.createChooser(shareIntent, header));
         } catch (Throwable tr) {
-            Log.d("BitmapUtil", "Couldn't save screenshot", tr);
+            AppLogs.d("BitmapUtil", "Couldn't save screenshot");
         }
     }
 
