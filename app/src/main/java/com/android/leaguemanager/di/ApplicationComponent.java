@@ -1,7 +1,5 @@
 package com.android.leaguemanager.di;
 
-import android.content.SharedPreferences;
-
 import com.android.leaguemanager.MainActivity;
 import com.android.leaguemanager.RegisterAccountActivity;
 import com.android.leaguemanager.homePage.homePageFragments.UserProfileFragment;

@@ -1,7 +1,6 @@
 package com.android.leaguemanager.utils;
 
 import android.content.Context;
-import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;

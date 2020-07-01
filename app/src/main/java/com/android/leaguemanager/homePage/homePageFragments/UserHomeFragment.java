@@ -7,11 +7,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.leaguemanager.R;
-import com.android.leaguemanager.mainPage.mainPageModel.MainPageRepository;
-import com.android.leaguemanager.mainPage.mainPagePresenter.MainPagePresenterListener;
-import com.android.leaguemanager.mainPage.mainPageView.MainPageViewListener;
-
-import javax.inject.Inject;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

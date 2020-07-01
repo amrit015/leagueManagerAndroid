@@ -45,8 +45,7 @@
                         android:id="@+id/img_profile"
                         android:layout_width="@dimen/imageview_width_height"
                         android:layout_height="@dimen/imageview_width_height"
-                        android:src="@drawable/navigation_profile"
-                        android:tint="@color/white" />
+                        android:src="@drawable/navigation_profile" />
 
                     <View
                         android:id="@+id/view_plus"

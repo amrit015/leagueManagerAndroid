@@ -3,8 +3,6 @@ package com.android.leaguemanager.mainPage.mainPageModel.loginResponse;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import kotlin.ExperimentalStdlibApi;
-
 public class LoginResponse {
 
     @SerializedName("timestamp")

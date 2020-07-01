@@ -1,6 +1,5 @@
 package com.android.leaguemanager.mainPage.mainPagePresenter;
 
-import com.android.leaguemanager.MainActivity;
 import com.android.leaguemanager.mainPage.mainPageModel.MainPageModelListener;
 import com.android.leaguemanager.mainPage.mainPageModel.MainPageRepository;
 import com.android.leaguemanager.mainPage.mainPageModel.loginResponse.LoginResponse;

@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.leaguemanager.di.LeagueApp;
 import com.android.leaguemanager.mainPage.mainPageModel.MainPageRepository;

@@ -12,5 +12,6 @@
     <color name="orange_red">#CD513B</color>
     <color name="gold">#FFD700</color>
     <color name="grey">#888888</color>
-    <color name="grey_black">#222121</color>
+    <color name="dark_grey">#5A5858</color>
+    <color name="grey_black">#2E2D2D</color>
 </resources>

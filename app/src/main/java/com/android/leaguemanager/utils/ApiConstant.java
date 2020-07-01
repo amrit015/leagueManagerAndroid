@@ -5,7 +5,7 @@ public class ApiConstant {
     // url and endpoints
     public static final String BASE_URL = "https://fifa.us-east-2.elasticbeanstalk.com/";
     public static final String LOGIN = "auth/login";
-    public static final String REGISTER = "/register";
+    public static final String REGISTER = "auth/register";
 
 
     // fields on endpoints - call to server

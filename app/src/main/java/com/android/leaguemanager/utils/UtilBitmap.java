@@ -5,18 +5,12 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
 import android.graphics.Matrix;
-
-import androidx.exifinterface.media.ExifInterface;
-
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.Base64;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
 
 import com.android.leaguemanager.BuildConfig;
 
@@ -25,12 +19,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.FileProvider;
+import androidx.exifinterface.media.ExifInterface;
 
 public class UtilBitmap {
 
@@ -216,33 +212,6 @@ public class UtilBitmap {
         return inSampleSize;
     }
 
-    // get the pathname of the image selected from the gallery
-    private static String getRealPathFromURI(Context context, Uri contentURI) {
-        String filePath = "";
-        String wholeID = DocumentsContract.getDocumentId(contentURI);
-
-        // Split at colon, use second item in the array
-        String id = wholeID.split(":")[1];
-
-        String[] column = {MediaStore.Images.Media.DATA};
-
-        // where id is equal to
-        String sel = MediaStore.Images.Media._ID + "=?";
-
-        Cursor cursor = context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-                column, sel, new String[]{id}, null);
-
-        assert cursor != null;
-        int columnIndex = cursor.getColumnIndex(column[0]);
-
-        if (cursor.moveToFirst()) {
-            filePath = cursor.getString(columnIndex);
-        }
-        cursor.close();
-        return filePath;
-    }
-
-
     public static Bitmap doNecessaryActionsForSelectedImage(Context context, Uri selectedImage) {
         try {
             Bitmap bitmap = BitmapFactory.decodeStream(context.getContentResolver().openInputStream(selectedImage));
@@ -259,5 +228,85 @@ public class UtilBitmap {
     public static Bitmap doNecessaryActionsForCapturedImage(String mCurrentPhotoPath) {
         Bitmap bitmap = performBitmapOperations(mCurrentPhotoPath);
         return performCompression(bitmap);
+    }
+
+    // get the pathname of the image selected from the gallery
+    private static String getRealPathFromURI(Context context, Uri contentURI) {
+        String filePath = "";
+        try {
+            if (contentURI != null) {
+                if (DocumentsContract.isDocumentUri(context, contentURI)) {
+                    String wholeID = DocumentsContract.getDocumentId(contentURI);
+
+                    // Split at colon, use second item in the array
+                    if (wholeID.length() > 0) {
+                        String[] splitId = wholeID.split(":");
+                        if (splitId.length > 1) {
+                            String id = splitId[1];
+                            filePath = getDataColumn(context, id);
+                        }
+                    }
+                } else {
+                    // google photos
+                    InputStream inputStream = context.getContentResolver().openInputStream(contentURI);
+                    File photoFile = createTemporalFileFrom(context, inputStream);
+
+                    filePath = photoFile.getPath();
+                }
+            }
+            return filePath;
+        } catch (
+                IllegalArgumentException | IOException e) {
+            return filePath;
+        }
+    }
+
+    private static File createTemporalFileFrom(Context context, InputStream inputStream) throws IOException {
+        File targetFile = null;
+
+        if (inputStream != null) {
+            int read;
+            byte[] buffer = new byte[8 * 1024];
+
+            targetFile = createTemporalFile(context);
+            OutputStream outputStream = new FileOutputStream(targetFile);
+
+            while ((read = inputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, read);
+            }
+            outputStream.flush();
+
+            try {
+                outputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return targetFile;
+    }
+
+    private static File createTemporalFile(Context context) {
+        return new File(context.getExternalCacheDir(), "tempFile.jpg");
+    }
+
+    private static String getDataColumn(Context context, String id) {
+        String filePath = "";
+        String[] column = {MediaStore.Images.Media.DATA};
+
+        // where id is equal to
+        String sel = MediaStore.Images.Media._ID + "=?";
+
+        Cursor cursor = context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                column, sel, new String[]{id}, null);
+
+        if (cursor != null) {
+            int columnIndex = cursor.getColumnIndex(column[0]);
+
+            if (cursor.moveToFirst()) {
+                filePath = cursor.getString(columnIndex);
+            }
+            cursor.close();
+        }
+        return filePath;
     }
 }
